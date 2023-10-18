@@ -26,7 +26,7 @@ export class DomControl {
     fetch(event.target.href)
       .then(res => res.blob())
       .then(blob => this.downloadSize += blob.size) //eslint-disable-line
-      .then(this.downloaded())
+      .then(() => this.downloaded())
   }
 
   downloaded = () => {
